@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Cards</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f5f5;
+            margin: 0;
+            padding: 50px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .products {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            background: white;
+            width: 250px;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px #ccc;
+            text-align: center;
+        }
+
+        .product-image {
+            height: 180px;
+            background: #eee;
+            border-radius: 10px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            font-size: 70px;
+        }
+
+        .card h2 {
+            margin-bottom: 10px;
+        }
+
+        .price {
+            font-size: 22px;
+            font-weight: bold;
+            margin: 15px 0;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background: black;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background: #333;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Products</h1>
+
+    <div class="products">
+
+        <div class="card">
+            <div class="product-image">👟</div>
+
+            <h2>Running Shoes</h2>
+
+            <p>Comfortable running shoes</p>
+
+            <div class="price">₹2,999</div>
+
+            <button onclick="addToCart(this)">
+                Add to Cart
+            </button>
+        </div>
+
+
+        <div class="card">
+            <div class="product-image">⌚</div>
+
+            <h2>Smart Watch</h2>
+
+            <p>Modern smartwatch</p>
+
+            <div class="price">₹4,999</div>
+
+            <button onclick="addToCart(this)">
+                Add to Cart
+            </button>
+        </div>
+
+
+        <div class="card">
+            <div class="product-image">🎧</div>
+
+            <h2>Headphones</h2>
+
+            <p>Wireless headphones</p>
+
+            <div class="price">₹1,999</div>
+
+            <button onclick="addToCart(this)">
+                Add to Cart
+            </button>
+        </div>
+
+    </div>
+
+
+    <script>
+        function addToCart(button) {
+            button.innerText = "Added ✓";
+            button.style.background = "green";
+        }
+    </script>
+
+</body>
+</html>
